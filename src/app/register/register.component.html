@@ -1,0 +1,36 @@
+{{msg}}
+<form>
+    <table>
+        <tr> 
+            <td>UserName:</td>
+            <td><input type="text" [(ngModel)]="username" name="username" required/></td>
+        </tr>
+        <tr> 
+            <td>Password:</td>
+            <td><input type="password" [(ngModel)]="password" name="password" required/></td>
+           
+        </tr>
+        <tr> 
+            <td>Confirm Password:</td>
+            <td><input type="password"  [(ngModel)]="cnfpassword" name="cnfpassword" required/></td>
+           
+        </tr>
+        <tr> 
+            <td>Age:</td><tr></tr>
+            <td><input type="number" [(ngModel)]="age" name="age"/></td>
+           
+        </tr>
+        <tr> 
+            <td>Contact:</td>
+            <td><input type="number" [(ngModel)]="contact" name="contact"/></td>
+           
+        </tr>
+       
+        <tr>
+            <td>
+                <button (click)=" registerUser()">Register</button>
+            </td>
+           
+        </tr>
+    </table>
+</form>
