@@ -1,0 +1,27 @@
+<p>vendorlogin works!</p>
+{{msg}}
+<form>
+    <table>
+        <tr> 
+            <td>UserName:</td>
+            <td><input type="text"  [(ngModel)] = "username" name="userName" required/></td>
+        </tr>
+        <tr> 
+            <td>Password:</td>
+            <td><input type="password"  [(ngModel)] ="password" name="password" required/></td>
+           
+        </tr>     
+        <tr>
+            <td>
+                <button (click)="userLogin()">Login</button>
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                <button routerLink="/itemavailable" routerLinkActive="Active">ItemAvailable</button>
+            </td>
+           
+        </tr>
+    </table>
+</form>

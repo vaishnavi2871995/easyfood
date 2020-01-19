@@ -1,0 +1,9 @@
+<p>displayorder works!</p>
+<h3>Order No:</h3>
+<h4>{{orderNo}}</h4>
+<div *ngFor="let o of order">
+    <div >{{o.item}}  {{o.quantity}}</div>
+ </div>
+
+ <button (click)=vendorOrder() routerLink="/vendorlogin" routerLinkActive="Active">vendor  Login</button>
+ <button (click)=vendorOrder() routerLink="/login" routerLinkActive="Active">user  Login</button>

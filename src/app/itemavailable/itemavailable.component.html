@@ -1,0 +1,36 @@
+<h3>Breakfast</h3>
+<div *ngFor="let bf of breakfast">
+  <!-- <button (click)=insertOrder(bf,quantity.value)>{{bf.item}} price:{{bf.price}} </button>
+    <input #quantity name="check_list[]"/> -->
+  <p>{{bf.item}} {{bf.price}} [A/NA]</p>
+</div>
+<p>-------------------------</p>
+<h3>Lunch</h3>
+<div *ngFor="let l of lunch">
+  <!-- <button (click)=insertOrder(l,quantity.value)>{{l.item}} price:{{l.price}} </button>
+    <input #quantity name="check_list[]"/> -->
+  <p>{{l.item}} {{l.price}} [A/NA]</p>
+</div>
+<p>-------------------------</p>
+<h3>Dinner</h3>
+<div *ngFor="let d of dinner">
+  <!-- <button (click)=insertOrder(d,quantity.value)>{{d.item}} price:{{d.price}}</button>
+    <input #quantity name="check_list[]"/> -->
+  <p>{{d.item}} {{d.price}} [A/NA]</p>
+</div>
+<p>-------------------------</p>
+<div *ngIf="status">
+  
+    <label>type: </label>
+    <select (change)="selectType($event.target.value)">
+      <option value="0">--All--</option>
+      <option *ngFor="let t of type" value={{t}}>
+        {{t}}
+      </option>
+    </select>
+ 
+  <input placeholder="item" ([ngmodel])="item" />
+  <input placeholder="price" ([ngmodel])="price" />
+  <button (click)=onSave()>SAVE ITEMS</button>
+</div>
+<button (click)=onclick()>Add Item</button>

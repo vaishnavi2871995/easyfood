@@ -1,0 +1,12 @@
+<h2>Orders</h2>
+<div *ngFor="let o of vendororders">
+    <div *ngFor="let o1 of o">
+        <div>{{o1.orderid}}</div>
+        <div *ngFor="let ord of o1.ords">
+            <div>{{ord.item}} {{ord.quantity}}</div>
+        </div>
+    </div>
+    <p>---------------</p>
+</div>
+<button (click)=orderReady()>READY</button>
+<button (click)=vendorDelivered()>DELIVERED</button>

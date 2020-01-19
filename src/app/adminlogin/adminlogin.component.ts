@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from "@angular/router";
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-adminlogin',
+  templateUrl: './adminlogin.component.html',
+  styleUrls: ['./adminlogin.component.css']
 })
-export class LoginComponent implements OnInit {
+export class AdminloginComponent implements OnInit {
   username:string;
   password: string;
   status: boolean = false;
@@ -33,7 +32,5 @@ export class LoginComponent implements OnInit {
       this.msg = "Login Failed";
     }
   }
- 
-
 
 }

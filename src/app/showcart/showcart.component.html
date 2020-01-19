@@ -1,0 +1,9 @@
+<p>showcart works!</p>
+<!-- <button (click)=showcart()>show cart</button> -->
+    <div *ngFor="let o of orders">
+        <div>{{o.item}} {{o.quantity}} </div>
+    </div>
+    <div>Total: {{bill}}</div>
+<nav>
+    <button routerLink="/displayorder" routerLinkActive="Active">PAY</button>
+</nav>

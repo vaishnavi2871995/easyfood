@@ -1,0 +1,25 @@
+<!-- <form #myItem="ngForm" (ngSubmit)="retrieveItems(myItem.value"></form> -->
+<h3>Breakfast</h3>
+<div *ngFor="let bf of breakfast">
+    <button (click)=insertOrder(bf,quantity.value)>{{bf.item}} price:{{bf.price}} </button>
+    <input #quantity name="check_list[]"/>
+ </div>
+
+ <h3>Lunch</h3>
+ <div *ngFor="let l of lunch">
+    <button (click)=insertOrder(l,quantity.value)>{{l.item}} price:{{l.price}} </button>
+    <input #quantity name="check_list[]"/>
+ </div>
+
+ <h3>Dinner</h3>
+ <div *ngFor="let d of dinner">
+    <button (click)=insertOrder(d,quantity.value)>{{d.item}} price:{{d.price}}</button>
+    <input #quantity name="check_list[]"/>
+ </div>
+ 
+
+<!-- <nav>
+ <button (click)=Addcart() routerLink="/showcart" routerLinkActive="Active">Show Cart</button>
+</nav> -->
+
+<button (click)=Addcart() routerLink="/showcart" >Show Cart</button>
