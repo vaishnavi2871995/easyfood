@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserOrdersService } from "../user-orders.service";
-
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-showcart',
@@ -10,9 +10,11 @@ import { UserOrdersService } from "../user-orders.service";
 export class ShowcartComponent implements OnInit {
 orders:any=[];
 bill:number=0;
+username:any;
+amount:any;
 
 
-  constructor(public userordersservice:UserOrdersService) { }
+  constructor(public userordersservice:UserOrdersService,public userService:UserService) { }
 
   ngOnInit() {
     this.orders=this.userordersservice.getOrder();
@@ -20,6 +22,12 @@ bill:number=0;
     {
       this.bill=this.bill+(this.orders[i].quantity*this.orders[i].price);
     }
+    console.log(this.bill);
+
+  }
+  public pay(username,amount)
+  {
+      
   }
   
 //  public totalBill(){

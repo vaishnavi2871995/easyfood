@@ -9,6 +9,9 @@ import { VendorloginComponent } from './vendorlogin/vendorlogin.component';
 import { VendorordersComponent } from './vendororders/vendororders.component';
 import { ItemavailableComponent } from "./itemavailable/itemavailable.component";
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminordersComponent } from "./adminorders/adminorders.component";
+import {  AdminrechargeComponent} from "./adminrecharge/adminrecharge.component";
+
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -20,7 +23,9 @@ const routes: Routes = [
 {path:'vendorlogin',component:VendorloginComponent},
 {path:'vendororder',component:VendorordersComponent},
 {path:'itemavailable',component:ItemavailableComponent},
-{path:'adminlogin',component:AdminloginComponent}
+{path:'adminlogin',component:AdminloginComponent},
+{path:'adminorder',component:AdminordersComponent},
+{path:'adminrecharge',component:AdminrechargeComponent}
 ];
 
 @NgModule({

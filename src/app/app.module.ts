@@ -20,6 +20,9 @@ import { VendorService } from "./vendor.service";
 import { VendorordersComponent } from './vendororders/vendororders.component';
 import { ItemavailableComponent } from './itemavailable/itemavailable.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminService } from "./admin.service";
+import { AdminordersComponent } from './adminorders/adminorders.component';
+import { AdminrechargeComponent } from './adminrecharge/adminrecharge.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,9 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     VendorloginComponent,
     VendorordersComponent,
     ItemavailableComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    AdminordersComponent,
+    AdminrechargeComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     AppRoutingModule,
     FormsModule 
   ],
-  providers: [UserService,UserOrdersService,GenerateordernoService,VendorService],
+  providers: [UserService,UserOrdersService,GenerateordernoService,VendorService,AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

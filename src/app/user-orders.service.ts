@@ -16,6 +16,7 @@ export class UserOrdersService {
   vendororders:any=[];
   orders:any=[];
 totalBill:any;
+user:any;
 
 
   constructor() { }
@@ -56,10 +57,13 @@ totalBill:any;
   {
     this.Dinner.push(obj);
   }
-
+  public setUser(user:any)
+  {
+    this.user=user;
+  }
   public venderOrders(o:any){
     console.log(o);
-    this.vendororders.unshift({o,"bill":this.totalBill});
+    this.vendororders.unshift(o);
     console.log(this.vendororders);
   }
   public getVendorOrders(){

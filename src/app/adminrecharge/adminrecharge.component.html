@@ -1,0 +1,22 @@
+<h2>Recharge</h2>
+{{msg}}
+<form>
+    <table>
+        <tr> 
+            <td>[PRN:ID/UserID]</td>
+            <td><input type="text"  [(ngModel)] = "id" name="id" required/></td>
+        </tr>
+        <tr> 
+            <td>Amount:</td>
+            <td><input type="number"  [(ngModel)] ="amount" name="amount" required/></td>
+           
+        </tr>     
+        <tr>
+            <td>
+                <button (click)="recharge()">Recharge</button>
+            </td>
+           
+        </tr>
+    </table>
+</form>
+
