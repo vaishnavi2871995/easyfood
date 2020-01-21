@@ -12,7 +12,7 @@ export class DisplayorderComponent implements OnInit {
   order:any[];
   orderNo:number=0;
   vendororders:any=[];
-  bill:number;
+  bill:number=0;
   A:any;
   constructor(public userordersservice:UserOrdersService,public generateorderservice: GenerateordernoService) { }
 

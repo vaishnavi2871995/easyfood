@@ -21,13 +21,23 @@ export class ItemavailableComponent implements OnInit {
 
   ngOnInit() {
     this.breakfast = this.userordersservice.getBreakfast();
+    console.log(this.breakfast);
+    console.log("in init");
     this.lunch=this.userordersservice.getLunch();
     this.dinner=this.userordersservice.getDinner();
   }
  
   onSave(){
-    if (this.val == "breakfast")
-       this.userordersservice.addBreakfast(this.obj);
+    console.log(this.val);
+    console.log(this.item);
+    this.obj={"item":this.item,"price":this.price,"quantity":0}
+    if (this.val == "breakfast"){
+      console.log("in break fast");
+      this.userordersservice.addBreakfast(this.obj);
+      this.breakfast = this.userordersservice.getBreakfast();
+      console.log(this.breakfast);
+    }
+       
     else if(this.val == "lunch")
     this.userordersservice.addLunch(this.obj);
     else if(this.val == "dinner")
@@ -41,7 +51,9 @@ export class ItemavailableComponent implements OnInit {
   }
   selectType(val: any) {
    this.val=val;
-   this.obj={"item":this.item,"price":this.price,"quantity":0}
+   console.log(this.item);
+   console.log(this.price);
+  
    
 }
 

@@ -12,6 +12,7 @@ breakfast:any=[];
 lunch:any=[];
 dinner:any=[];
 cart:any=[];
+id:any;
 
   constructor(public userordersservice:UserOrdersService,public router:Router,public _router:ActivatedRoute) { }
 
@@ -19,6 +20,7 @@ cart:any=[];
   this.breakfast = this.userordersservice.getBreakfast();
   this.lunch=this.userordersservice.getLunch();
   this.dinner=this.userordersservice.getDinner();
+  this.id=this._router.snapshot.paramMap.get("id");
   }
   // retrieveItems(items):any
   // {
@@ -28,7 +30,7 @@ cart:any=[];
   Addcart()
   {
     this.userordersservice.insertOrder(this.cart);
-    this.router.navigate(['/showcart']);
+    this.router.navigate(['/showcart',this.id]);
 
   }
 

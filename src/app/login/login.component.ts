@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       console.log("success");
       this.msg = "Login Successful";
     
-     this.router.navigate(['/userOrder']);
+     this.router.navigate(['/userOrder',this.username]);
     }
     else{
       console.log("failed");

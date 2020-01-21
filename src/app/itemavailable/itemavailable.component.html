@@ -29,8 +29,8 @@
       </option>
     </select>
  
-  <input placeholder="item" ([ngmodel])="item" />
-  <input placeholder="price" ([ngmodel])="price" />
+  <input placeholder="item" type="text" [(ngModel)]="item" name="item" />
+  <input placeholder="price" type="number" [(ngModel)]="price" name="price" />
   <button (click)=onSave()>SAVE ITEMS</button>
 </div>
 <button (click)=onclick()>Add Item</button>

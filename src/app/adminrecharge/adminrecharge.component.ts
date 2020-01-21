@@ -11,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 export class AdminrechargeComponent implements OnInit {
   id:any;
   amount:any;
-  status:boolean;
+  status:boolean=false;
   msg:string="";
   constructor(public userService:UserService,public router:Router,public _router:ActivatedRoute) { }
 
